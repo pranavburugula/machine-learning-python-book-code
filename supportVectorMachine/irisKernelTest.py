@@ -13,7 +13,7 @@ sc = StandardScaler()
 iris = datasets.load_iris()
 iris_X = iris.data[:, [2, 3]]
 iris_y = iris.target
-iris_svm = SVC(kernel='rbf', C=1.0, random_state=0, gamma=0.2)
+iris_svm = SVC(kernel='rbf', C=1.0, random_state=0, gamma=100.0)
 """iris_svm = SGDClassifier(loss='hinge')"""
 X_train, X_test, y_train, y_test = train_test_split(iris_X, iris_y, test_size=0.3, random_state=0)
 
